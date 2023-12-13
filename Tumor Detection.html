@@ -1,0 +1,220 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumor Detection </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+             height: 100%;
+             width: 200px;
+             position: fixed;
+              z-index: 1;
+              top: 0;
+             left: 0;
+             background-color: #f5efef;
+             padding-top: 20px;
+             padding-left: 10px;
+             color: white;
+             display: flex;
+             flex-direction: column;
+             align-items: center; /* Center items vertically */
+             border-color: #1d1c1c;
+        }
+        #sidebar img {
+              margin-bottom: 10px; /* Add some spacing between items */
+              max-width: 35%; /* Ensure images don't exceed container width */
+              cursor: pointer;
+             overflow: hidden; /* Prevent text overflow */
+             white-space: nowrap; /* Prevent text from wrapping */
+             text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d9d1e9;
+            color:#d9d1e9 ;
+            border-color: #1d1c1c;
+        }
+
+        header {
+            background-color: #d9d1e9;
+            color: #0e0d0d;
+            padding: 1em;
+            text-align: center;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1em;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            padding: 0.5em 1em;
+            background-color: #93bdca;
+            color: #171718;
+            border-radius: 5px;
+            margin-right: 1em;
+            border-color: #94d6f5;
+        }
+
+        canvas {
+            border: 1px solid #1a1b1b;
+            margin: 1em 0;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            cursor: pointer;
+            color: #18181a;
+            background-color: #93bdca;
+            border-color: #94d6f5;
+        }
+
+        click {
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            cursor: pointer;
+            color: #18181a;
+            background-color: #f8f9faef;
+        }
+        img {
+          width: 400px; /* Adjust the width of your image */
+          height: auto; /* Maintain aspect ratio */
+          margin-right: 30px; /* Adjust the spacing between the image and title */
+          margin-top: 10px; 
+        }
+
+        #report-section {
+            display: none;
+        }
+
+        
+    </style>
+<title>Tumor Detection </title>
+</head>
+<body>
+<header>
+    <br>
+    <br>
+    
+    <h1><img src="tumor.png" >Tumor Detection </h1>
+</header>
+<div class="container">
+    <input type="file" accept="image/*" id="uploadInput" style="display:none" onchange="handleFileUpload(this)">
+    <label for="uploadInput">Select Image</label>
+    <button onclick="output()">Output</button>
+    <button onclick="viewReport()">View Report</button>
+    <button onclick="shareReport()">Share Report</button>
+    <button onclick="reset()">Reset</button>
+
+    <canvas id="tumor-canvas" width="400" height="300"></canvas>
+
+    <div id="report-section">
+        <h2>Tumor Detection Report</h2>
+        <p>Report content goes here.</p>
+    </div>
+</div>
+
+<div id="sidebar">
+       
+        <br>
+        <br>
+        <br>
+        <br>
+    <click onclick="viewProfile()" style="text-align: center; cursor: pointer;">
+        <img src="profile.jpeg" > 
+        <br>
+        VIEW PROFILE
+    </click>
+
+    <click onclick="tumorDetection()" style="text-align: center; cursor: pointer;">
+        <img src="tumor detection.jpeg" > 
+        <br>
+        TUMOR DETECTION
+    </click>
+    
+    <click onclick="aiBasedRecommendation()"style="text-align: center; cursor: pointer;">
+        <img src="AI Based Recoomendation.jpeg" >
+        <br>
+        AI BASED RECOMMENDATIONS
+    </click>
+    
+    <click onclick="visualizationAndReporting()"style="text-align: center; cursor: pointer;">
+        <img src="Visulaization.jpeg" > 
+        <br>
+        VISUALIZATION AND REPORTING
+    </click>
+    
+    
+</div>
+
+<script>
+    function viewProfile() {
+        // Logic to show profile information
+    }
+
+    function tumorDetection() {
+        // Logic for visualization
+    }
+
+    function aiBasedRecommendations() {
+        // Logic for AI recommendations
+    }
+
+    function visualizationAndReporting() {
+        // Logic for visualization
+    }
+
+    function handleFileUpload(input) {
+            const selectedFile = input.files[0];
+            if (selectedFile) {
+                alert(`File "${selectedFile.name}" selected. Handle file upload logic here.`);
+            }
+        }
+
+        function output() {
+            alert('Functionality to give output. Placeholder.');
+            // Implement logic to identify tumor areas in MRI scans.
+        }
+
+        function viewReport() {
+            document.getElementById('report-section').style.display = 'block';
+            alert('Functionality to view report. Placeholder.');
+            // Implement logic to display detailed analysis report.
+        }
+
+        function shareReport() {
+            alert('Functionality to share report. Placeholder.');
+            // Implement logic to share the analysis report with others.
+        }
+
+        function reset() {
+            alert('Functionality to rest. Placeholder.');
+            // Implement logic to categorize identified tumors.
+        }
+</script>
+
+</body>
+</html>
